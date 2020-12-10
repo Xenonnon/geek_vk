@@ -17,15 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtz-Da-zIR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtz-Da-zIR">
                                 <rect key="frame" x="0.0" y="32" width="414" height="832"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-8M-cat" userLabel="passwordText">
-                                        <rect key="frame" x="151" y="372" width="202.5" height="34"/>
-                                        <accessibility key="accessibilityConfiguration" label="passwordText"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoQ-C0-7jG" userLabel="loginText">
                                         <rect key="frame" x="151" y="318" width="202.5" height="34"/>
                                         <accessibility key="accessibilityConfiguration" label="loginText"/>
@@ -67,6 +61,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VL7-8M-cat" userLabel="passwordText">
+                                        <rect key="frame" x="151" y="372" width="202.5" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" label="passwordText"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hhb-pb-0v5" firstAttribute="leading" secondItem="rHg-bP-bFa" secondAttribute="leading" constant="147" id="15E-8J-69L"/>
@@ -81,6 +81,7 @@
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="leading" secondItem="Vtz-Da-zIR" secondAttribute="leading" constant="62" id="YAG-HX-PW9"/>
                                     <constraint firstItem="PoQ-C0-7jG" firstAttribute="trailing" secondItem="VL7-8M-cat" secondAttribute="trailing" id="fTA-6I-Fv9"/>
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="width" secondItem="U0b-CM-nd3" secondAttribute="width" multiplier="1.13559" id="hCN-JK-Bnq"/>
+                                    <constraint firstAttribute="trailing" secondItem="VL7-8M-cat" secondAttribute="trailing" constant="60.5" id="hOQ-qN-Eas"/>
                                     <constraint firstAttribute="bottom" secondItem="hhb-pb-0v5" secondAttribute="bottom" id="ixw-z3-zKy"/>
                                     <constraint firstItem="hhb-pb-0v5" firstAttribute="top" secondItem="VL7-8M-cat" secondAttribute="bottom" constant="50" id="jYF-OM-9xZ"/>
                                     <constraint firstItem="6Jp-x2-eIb" firstAttribute="leading" secondItem="rHg-bP-bFa" secondAttribute="leading" constant="170" id="kuE-BF-oLZ"/>
