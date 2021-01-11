@@ -10,16 +10,20 @@ import UIKit
 class MyGroupsController: UITableViewController {
 
     var myGroups = [String]()
-    
+    var myGroupsImages = [UIImage]()
+
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         guard
             segue.identifier == "addGroup",
             let controller = segue.source as? AllGroupsController,
             let indexPath = controller.tableView.indexPathForSelectedRow,
-            !myGroups.contains(controller.allGroups[indexPath.row])
+            !myGroups.contains(controller.allGroupsSections[indexPath.section].items[indexPath.row].name)
+            //!myGroups.contains(controller.allGroups[indexPath.row].name)
         else { return }
-        let group = controller.allGroups[indexPath.row]
-        myGroups.append(group)
+        let group = controller.allGroupsSections[indexPath.section].items[indexPath.row]
+        //let group = controller.allGroups[indexPath.row]
+        myGroups.append(group.name)
+        myGroupsImages.append(group.image!)
         tableView.reloadData()
     }
     
@@ -27,7 +31,8 @@ class MyGroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             myGroups.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
+            myGroupsImages.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
@@ -39,11 +44,10 @@ class MyGroupsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupsCell", for: indexPath)
-                as? MyGroupsCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupsCell", for: indexPath) as? MyGroupsCell
         else { return UITableViewCell() }
         cell.myGroupName.text = myGroups[indexPath.row]
-        cell.myGroupImage.image = UIImage(named: "darth-vader")
+        cell.myGroupImage.image = myGroupsImages[indexPath.row]
 
         return cell
     }
