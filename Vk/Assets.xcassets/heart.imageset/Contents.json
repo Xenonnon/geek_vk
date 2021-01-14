@@ -1,10 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "darth-vader.jpg",
-<<<<<<< HEAD
-      "idiom" : "universal"
-=======
+      "filename" : "heart.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -15,19 +12,10 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
->>>>>>> v4
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-<<<<<<< HEAD
-    "auto-scaling" : "auto",
-    "template-rendering-intent" : "original"
-=======
-    "auto-scaling" : "auto"
->>>>>>> v4
   }
 }
