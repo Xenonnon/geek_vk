@@ -10,8 +10,14 @@ import UIKit
 
 class PhotoViewController: UICollectionViewController {
     
+<<<<<<< HEAD
     var images = [UIImage?]()
     
+=======
+    
+    var images = [UIImage?]()
+
+>>>>>>> v8
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -27,7 +33,11 @@ class PhotoViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> v8
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }

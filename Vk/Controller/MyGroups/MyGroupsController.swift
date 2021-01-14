@@ -12,6 +12,7 @@ class MyGroupsController: UITableViewController {
     var myGroups = [String]()
     var myGroupsImages = [UIImage]()
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
     
@@ -19,11 +20,15 @@ class MyGroupsController: UITableViewController {
 =======
 
 >>>>>>> v7
+=======
+
+>>>>>>> v8
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         guard
             segue.identifier == "addGroup",
             let controller = segue.source as? AllGroupsController,
             let indexPath = controller.tableView.indexPathForSelectedRow,
+<<<<<<< HEAD
 <<<<<<< HEAD
             !myGroups.contains(controller.allGroups[indexPath.row].name)
         else { return }
@@ -35,6 +40,13 @@ class MyGroupsController: UITableViewController {
         let group = controller.allGroupsSections[indexPath.section].items[indexPath.row]
         //let group = controller.allGroups[indexPath.row]
 >>>>>>> v7
+=======
+            !myGroups.contains(controller.allGroupsSections[indexPath.section].items[indexPath.row].name)
+            //!myGroups.contains(controller.allGroups[indexPath.row].name)
+        else { return }
+        let group = controller.allGroupsSections[indexPath.section].items[indexPath.row]
+        //let group = controller.allGroups[indexPath.row]
+>>>>>>> v8
         myGroups.append(group.name)
         myGroupsImages.append(group.image!)
         tableView.reloadData()

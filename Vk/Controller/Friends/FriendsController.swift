@@ -90,7 +90,11 @@ class FriendsController: UITableViewController {
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FriendsSeq" {
+<<<<<<< HEAD
             let controller = segue.destination as! PhotoViewController
+=======
+            let controller = segue.destination as! FullscreenPhotoVC//PhotoViewController
+>>>>>>> v8
             if let index = tableView.indexPathForSelectedRow {
                 var friends: Users
                 if filtering {

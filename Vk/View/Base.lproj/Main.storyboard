@@ -203,7 +203,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> v8
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-SE-R4n">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -211,7 +214,10 @@
                                                         <action selector="avatarAnimate:" destination="n2K-28-wFC" eventType="touchUpInside" id="fb5-La-rWF"/>
                                                     </connections>
                                                 </button>
+<<<<<<< HEAD
 >>>>>>> v7
+=======
+>>>>>>> v8
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -220,11 +226,17 @@
                                 <connections>
                                     <outlet property="friendImage" destination="Tpu-TM-EPX" id="qbv-jT-1ft"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                     <outlet property="friendImageView" destination="NDS-fc-6xG" id="ylB-iG-0r6"/>
 >>>>>>> v7
                                     <outlet property="friendName" destination="bGU-02-esK" id="uS8-bu-AXX"/>
                                     <segue destination="dVy-O4-7If" kind="show" identifier="FriendsSeq" id="1E6-VO-afA"/>
+=======
+                                    <outlet property="friendImageView" destination="NDS-fc-6xG" id="ylB-iG-0r6"/>
+                                    <outlet property="friendName" destination="bGU-02-esK" id="uS8-bu-AXX"/>
+                                    <segue destination="ghW-ho-I2C" kind="show" identifier="FriendsSeq" id="A5Q-Gy-7BX"/>
+>>>>>>> v8
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -240,12 +252,28 @@
             </objects>
             <point key="canvasLocation" x="5613.04347826087" y="-250.44642857142856"/>
         </scene>
+        <!--Fullscreen PhotoVC-->
+        <scene sceneID="0Fh-G6-ay6">
+            <objects>
+                <viewController id="ghW-ho-I2C" customClass="FullscreenPhotoVC" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NVb-ku-xK9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XgC-gJ-6Fi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gb6-gS-Hac"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efV-a9-bWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6193" y="-915"/>
+        </scene>
         <!--Photo View Controller-->
         <scene sceneID="hi4-pk-Ayu">
             <objects>
                 <collectionViewController modalPresentationStyle="fullScreen" id="dVy-O4-7If" customClass="PhotoViewController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="75D-UO-oZb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zuy-OG-1az">
@@ -335,7 +363,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> v8
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef2-aK-DWh">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -343,7 +374,10 @@
                                                         <action selector="avatarAnimate:" destination="wfs-OK-p8o" eventType="touchUpInside" id="eXt-5y-Ke8"/>
                                                     </connections>
                                                 </button>
+<<<<<<< HEAD
 >>>>>>> v7
+=======
+>>>>>>> v8
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -381,10 +415,14 @@
                 <tableViewController title="Новости" id="a0h-n2-8Qp" customClass="NewsController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="610" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ij-oU-88M">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
 =======
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
 >>>>>>> v7
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+>>>>>>> v8
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -516,10 +554,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6l-44-Fv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <point key="canvasLocation" x="5859" y="1558"/>
 =======
             <point key="canvasLocation" x="5857.971014492754" y="1557.5892857142856"/>
 >>>>>>> v7
+=======
+            <point key="canvasLocation" x="5857.971014492754" y="1557.5892857142856"/>
+>>>>>>> v8
         </scene>
         <!--Все группы-->
         <scene sceneID="RFq-gz-exx">
@@ -546,7 +588,10 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> v8
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-GQ-Npd">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -554,7 +599,10 @@
                                                         <action selector="avatarAnimate:" destination="1ci-eg-q8v" eventType="touchUpInside" id="49Z-oG-At7"/>
                                                     </connections>
                                                 </button>
+<<<<<<< HEAD
 >>>>>>> v7
+=======
+>>>>>>> v8
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -630,6 +678,7 @@
             <point key="canvasLocation" x="5613.04347826087" y="628.125"/>
         </scene>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <!--Item-->
         <scene sceneID="Qlh-lJ-y4C">
             <objects>
@@ -639,6 +688,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Olg-95-ukG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
 =======
+=======
+>>>>>>> v8
         <!--Новости-->
         <scene sceneID="Qlh-lJ-y4C">
             <objects>
@@ -647,7 +698,10 @@
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Olg-95-ukG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+<<<<<<< HEAD
 >>>>>>> v7
+=======
+>>>>>>> v8
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -664,9 +718,13 @@
         <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
 >>>>>>> v7
+=======
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+>>>>>>> v8
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
