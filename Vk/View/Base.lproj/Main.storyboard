@@ -51,7 +51,7 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Войти"/>
                                         <connections>
-                                            <segue destination="049-hP-w5s" kind="show" id="kzm-kn-U9a"/>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xz1-Y5-yeP"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-x2-eIb">
@@ -67,24 +67,54 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEn-hP-sZx">
+                                        <rect key="frame" x="182" y="641" width="10" height="10"/>
+                                        <color key="backgroundColor" red="0.15644717220000001" green="0.52899801729999996" blue="0.95893710850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="ULb-2P-DTr"/>
+                                            <constraint firstAttribute="width" constant="10" id="eHh-EO-kYS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-oZ-vyw">
+                                        <rect key="frame" x="202" y="641" width="10" height="10"/>
+                                        <color key="backgroundColor" red="0.15644717220000001" green="0.52899801729999996" blue="0.95893710850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="zOW-Ut-3TC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikq-6g-8Jb">
+                                        <rect key="frame" x="222" y="641" width="10" height="10"/>
+                                        <color key="backgroundColor" red="0.15644717220000001" green="0.52899801729999996" blue="0.95893710850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="dqd-KW-qLc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Ma8-oZ-vyw" firstAttribute="leading" secondItem="kEn-hP-sZx" secondAttribute="trailing" constant="10" id="0iQ-Fv-aNb"/>
                                     <constraint firstItem="hhb-pb-0v5" firstAttribute="leading" secondItem="rHg-bP-bFa" secondAttribute="leading" constant="147" id="15E-8J-69L"/>
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="top" secondItem="6Jp-x2-eIb" secondAttribute="bottom" constant="148" id="1Rs-kq-tRe"/>
+                                    <constraint firstItem="kEn-hP-sZx" firstAttribute="top" secondItem="Ma8-oZ-vyw" secondAttribute="top" id="2Ms-0d-VVi"/>
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="centerY" secondItem="PoQ-C0-7jG" secondAttribute="centerY" constant="-6.5" id="5QO-Z0-rir"/>
                                     <constraint firstItem="U0b-CM-nd3" firstAttribute="leading" secondItem="rHg-bP-bFa" secondAttribute="leading" constant="62" id="6Ra-7o-LwN"/>
+                                    <constraint firstItem="Ma8-oZ-vyw" firstAttribute="top" secondItem="ikq-6g-8Jb" secondAttribute="top" id="ERZ-a5-CHK"/>
                                     <constraint firstItem="U0b-CM-nd3" firstAttribute="centerY" secondItem="VL7-8M-cat" secondAttribute="centerY" constant="-6.5" id="EeE-XH-HVS"/>
                                     <constraint firstItem="6Jp-x2-eIb" firstAttribute="top" secondItem="Vtz-Da-zIR" secondAttribute="top" constant="103" id="Hok-1r-Jy5"/>
                                     <constraint firstItem="VL7-8M-cat" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U0b-CM-nd3" secondAttribute="trailing" constant="8" symbolic="YES" id="Iiv-gr-yDb"/>
+                                    <constraint firstItem="kEn-hP-sZx" firstAttribute="top" secondItem="hhb-pb-0v5" secondAttribute="bottom" constant="155" id="Nqe-cn-3cS"/>
                                     <constraint firstItem="hhb-pb-0v5" firstAttribute="centerX" secondItem="Vtz-Da-zIR" secondAttribute="centerX" id="QMP-8f-LSk"/>
                                     <constraint firstItem="6Jp-x2-eIb" firstAttribute="centerX" secondItem="Vtz-Da-zIR" secondAttribute="centerX" id="TQ0-Ud-8zt"/>
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="leading" secondItem="Vtz-Da-zIR" secondAttribute="leading" constant="62" id="YAG-HX-PW9"/>
+                                    <constraint firstItem="Ma8-oZ-vyw" firstAttribute="centerX" secondItem="hhb-pb-0v5" secondAttribute="centerX" id="aXD-RY-U9g"/>
+                                    <constraint firstItem="kEn-hP-sZx" firstAttribute="bottom" secondItem="Ma8-oZ-vyw" secondAttribute="bottom" id="cle-CI-YXo"/>
                                     <constraint firstItem="PoQ-C0-7jG" firstAttribute="trailing" secondItem="VL7-8M-cat" secondAttribute="trailing" id="fTA-6I-Fv9"/>
+                                    <constraint firstItem="ikq-6g-8Jb" firstAttribute="leading" secondItem="Ma8-oZ-vyw" secondAttribute="trailing" constant="10" id="g1p-Yh-wvS"/>
                                     <constraint firstItem="koG-bP-MGC" firstAttribute="width" secondItem="U0b-CM-nd3" secondAttribute="width" multiplier="1.13559" id="hCN-JK-Bnq"/>
                                     <constraint firstAttribute="trailing" secondItem="VL7-8M-cat" secondAttribute="trailing" constant="60.5" id="hOQ-qN-Eas"/>
                                     <constraint firstAttribute="bottom" secondItem="hhb-pb-0v5" secondAttribute="bottom" id="ixw-z3-zKy"/>
                                     <constraint firstItem="hhb-pb-0v5" firstAttribute="top" secondItem="VL7-8M-cat" secondAttribute="bottom" constant="50" id="jYF-OM-9xZ"/>
                                     <constraint firstItem="6Jp-x2-eIb" firstAttribute="leading" secondItem="rHg-bP-bFa" secondAttribute="leading" constant="170" id="kuE-BF-oLZ"/>
+                                    <constraint firstItem="Ma8-oZ-vyw" firstAttribute="bottom" secondItem="ikq-6g-8Jb" secondAttribute="bottom" id="m2c-Xp-PsG"/>
                                     <constraint firstItem="U0b-CM-nd3" firstAttribute="leading" secondItem="koG-bP-MGC" secondAttribute="leading" id="pfg-1u-XkO"/>
                                     <constraint firstItem="VL7-8M-cat" firstAttribute="top" secondItem="PoQ-C0-7jG" secondAttribute="bottom" constant="20" id="sCE-hU-uet"/>
                                     <constraint firstItem="PoQ-C0-7jG" firstAttribute="leading" secondItem="koG-bP-MGC" secondAttribute="trailing" constant="22" id="yEL-VC-99x"/>
@@ -105,11 +135,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="6hj-Tx-U5W"/>
                     <connections>
+                        <outlet property="firstDot" destination="kEn-hP-sZx" id="VmE-fb-EEm"/>
                         <outlet property="loginButton" destination="hhb-pb-0v5" id="1F1-Ez-3aS"/>
                         <outlet property="loginText" destination="PoQ-C0-7jG" id="Bnu-Up-Ucj"/>
                         <outlet property="passwordText" destination="VL7-8M-cat" id="Zrh-DS-Ucu"/>
                         <outlet property="scrollView" destination="Vtz-Da-zIR" id="UWL-za-dSm"/>
+                        <outlet property="secondDot" destination="Ma8-oZ-vyw" id="haH-fm-YTc"/>
+                        <outlet property="thirdDot" destination="ikq-6g-8Jb" id="Nz3-aB-5tl"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="mXq-kQ-4vN"/>
+                        <segue destination="049-hP-w5s" kind="modal" identifier="MainSegue" id="UGq-GZ-xF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,6 +202,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+<<<<<<< HEAD
+=======
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-SE-R4n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="avatarAnimate:" destination="n2K-28-wFC" eventType="touchUpInside" id="fb5-La-rWF"/>
+                                                    </connections>
+                                                </button>
+>>>>>>> v7
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -175,6 +219,10 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="friendImage" destination="Tpu-TM-EPX" id="qbv-jT-1ft"/>
+<<<<<<< HEAD
+=======
+                                    <outlet property="friendImageView" destination="NDS-fc-6xG" id="ylB-iG-0r6"/>
+>>>>>>> v7
                                     <outlet property="friendName" destination="bGU-02-esK" id="uS8-bu-AXX"/>
                                     <segue destination="dVy-O4-7If" kind="show" identifier="FriendsSeq" id="1E6-VO-afA"/>
                                 </connections>
@@ -286,12 +334,23 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+<<<<<<< HEAD
+=======
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef2-aK-DWh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="avatarAnimate:" destination="wfs-OK-p8o" eventType="touchUpInside" id="eXt-5y-Ke8"/>
+                                                    </connections>
+                                                </button>
+>>>>>>> v7
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="groupImageView" destination="gRy-3Y-czH" id="hap-gc-iwL"/>
                                     <outlet property="myGroupImage" destination="d9c-kU-E4L" id="Dyw-b6-G1J"/>
                                     <outlet property="myGroupName" destination="Gh8-1T-MDe" id="THe-cZ-RdE"/>
                                 </connections>
@@ -321,7 +380,11 @@
             <objects>
                 <tableViewController title="Новости" id="a0h-n2-8Qp" customClass="NewsController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="610" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ij-oU-88M">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+>>>>>>> v7
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -452,7 +515,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6l-44-Fv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="5859" y="1558"/>
+=======
+            <point key="canvasLocation" x="5857.971014492754" y="1557.5892857142856"/>
+>>>>>>> v7
         </scene>
         <!--Все группы-->
         <scene sceneID="RFq-gz-exx">
@@ -478,6 +545,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+<<<<<<< HEAD
+=======
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-GQ-Npd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="avatarAnimate:" destination="1ci-eg-q8v" eventType="touchUpInside" id="49Z-oG-At7"/>
+                                                    </connections>
+                                                </button>
+>>>>>>> v7
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -491,6 +568,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="groupImageView" destination="bJk-5e-RQX" id="WjQ-vt-YOn"/>
                                     <outlet property="myGroupImage" destination="bxf-O3-pRG" id="k6x-iW-g2T"/>
                                     <outlet property="myGroupName" destination="avA-YE-5Db" id="683-N9-Ih0"/>
                                     <segue destination="YR1-cG-SKy" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="p9P-qI-k48"/>
@@ -551,6 +629,7 @@
             </objects>
             <point key="canvasLocation" x="5613.04347826087" y="628.125"/>
         </scene>
+<<<<<<< HEAD
         <!--Item-->
         <scene sceneID="Qlh-lJ-y4C">
             <objects>
@@ -559,6 +638,16 @@
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Olg-95-ukG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+=======
+        <!--Новости-->
+        <scene sceneID="Qlh-lJ-y4C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ijz-bj-ySM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper.fill" catalog="system" id="bfX-mt-Fcr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Olg-95-ukG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+>>>>>>> v7
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -574,6 +663,10 @@
     <resources>
         <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
+<<<<<<< HEAD
+=======
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+>>>>>>> v7
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

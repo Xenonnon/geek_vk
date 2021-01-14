@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B05EDE5259E0C9A00637E3E /* AvaAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05EDE4259E0C9A00637E3E /* AvaAnimation.swift */; };
 		9B37860A25756402009EC390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37860925756402009EC390 /* AppDelegate.swift */; };
 		9B37860C25756402009EC390 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37860B25756402009EC390 /* SceneDelegate.swift */; };
 		9B37860E25756402009EC390 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37860D25756402009EC390 /* LoginViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B05EDE4259E0C9A00637E3E /* AvaAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaAnimation.swift; sourceTree = "<group>"; };
 		9B37860625756402009EC390 /* Vk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B37860925756402009EC390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B37860B25756402009EC390 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,10 @@
 				9B711F55259A51A0003788EE /* News.swift */,
 				9B5A1EFE259A68DC00A7F776 /* Users.swift */,
 				9B5A1F01259A691B00A7F776 /* PictSettings.swift */,
+<<<<<<< HEAD
+=======
+				9B05EDE4259E0C9A00637E3E /* AvaAnimation.swift */,
+>>>>>>> v7
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				9B5A1EFF259A68DC00A7F776 /* Users.swift in Sources */,
 				9B7527712593DA49006E58A5 /* Groups.swift in Sources */,
 				9B5201B62586B8C600AFB912 /* MyGroupsController.swift in Sources */,
+				9B05EDE5259E0C9A00637E3E /* AvaAnimation.swift in Sources */,
 				9B5201BD2586BA8B00AFB912 /* AllGroupsController.swift in Sources */,
 				9B75277B2593FA92006E58A5 /* FriendsCell.swift in Sources */,
 				9B52019F25867A7B00AFB912 /* FriendsController.swift in Sources */,

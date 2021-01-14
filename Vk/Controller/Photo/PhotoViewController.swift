@@ -34,6 +34,7 @@ class PhotoViewController: UICollectionViewController {
 
 }
 
+<<<<<<< HEAD
 extension UIButton {
     func pulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
@@ -47,3 +48,18 @@ extension UIButton {
         layer.add(pulse, forKey: nil)
     }
 }
+=======
+//extension UIButton {
+//    func pulsate() {
+//        let pulse = CASpringAnimation(keyPath: "transform.scale")
+//        pulse.duration = 0.3
+//        pulse.fromValue = 0.7
+//        pulse.toValue = 1.0
+//        pulse.autoreverses = true
+//        pulse.repeatCount = 1.0
+//        pulse.initialVelocity = 0.9
+//        pulse.damping = 1.0
+//        layer.add(pulse, forKey: nil)
+//    }
+//}
+>>>>>>> v7

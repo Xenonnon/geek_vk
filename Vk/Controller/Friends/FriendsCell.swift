@@ -11,5 +11,13 @@ class FriendsCell: UITableViewCell {
 
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendImage: UIImageView!
+<<<<<<< HEAD
     
+=======
+    @IBOutlet weak var friendImageView: ImageModTwo!
+    @IBAction func avatarAnimate(_ sender: UIButton) {
+        sender.avaAnimation(avatarAnimation: friendImageView)
+        
+    }
+>>>>>>> v7
 }
