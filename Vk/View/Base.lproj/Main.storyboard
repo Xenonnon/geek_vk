@@ -638,7 +638,7 @@
         <!--Друзья-->
         <scene sceneID="WVV-2c-Tfl">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="HSQ-7u-iSd" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="HSQ-7u-iSd" customClass="CustomNavigationController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.3.fill" catalog="system" id="bYC-84-SNr">
                         <color key="badgeColor" systemColor="linkColor"/>
                     </tabBarItem>
@@ -660,7 +660,7 @@
         <!--Сообщества-->
         <scene sceneID="BwD-RI-7d2">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="XWk-Gv-KeT" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="XWk-Gv-KeT" customClass="CustomNavigationController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Сообщества" image="bag.fill" catalog="system" id="xrs-EB-APv"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
