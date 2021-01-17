@@ -22,11 +22,7 @@ final class Friends {
     static func makeFriends() -> [Users] {
         let fr1 = Users(userName: "1111", userAvatar: UIImage(named: "camera"), userImages: [UIImage(named: "darth-vader"),UIImage(named: "darth-vader"),UIImage(named: "darth-vader")])
         let fr2 = Users(userName: "Илон Маск", userAvatar: UIImage(named: "darth-vader"), userImages: [UIImage(named: "darth-vader"),UIImage(named: "darth-vader"),UIImage(named: "darth-vader")])
-<<<<<<< HEAD
-        let fr3 = Users(userName: "Всемогущий я", userAvatar: UIImage(named: "4ch"), userImages: [UIImage(named: "bluelike"),UIImage(named: "bluelike"),UIImage(named: "heart")])
-=======
         let fr3 = Users(userName: "Всемогущий я", userAvatar: UIImage(named: "4ch"), userImages: [UIImage(named: "moscow"),UIImage(named: "moscow"),UIImage(named: "moscow")])
->>>>>>> v8
         let fr4 = Users(userName: "И прочие", userAvatar: UIImage(named: "darth-vader"), userImages: [UIImage(named: "darth-vader"),UIImage(named: "darth-vader"),UIImage(named: "darth-vader")])
         let fr5 = Users(userName: "АННА", userAvatar: UIImage(named: "camera"), userImages: [UIImage(named: "darth-vader"),UIImage(named: "darth-vader"),UIImage(named: "darth-vader")])
         let fr6 = Users(userName: "Энакин", userAvatar: UIImage(named: "darth-vader"), userImages: [UIImage(named: "darth-vader"),UIImage(named: "darth-vader"),UIImage(named: "darth-vader")])
