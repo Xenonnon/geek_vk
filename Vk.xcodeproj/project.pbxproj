@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		9B5201B62586B8C600AFB912 /* MyGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5201B52586B8C600AFB912 /* MyGroupsController.swift */; };
 		9B5201B92586B92000AFB912 /* MyGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5201B82586B92000AFB912 /* MyGroupsCell.swift */; };
 		9B5201BD2586BA8B00AFB912 /* AllGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5201BC2586BA8B00AFB912 /* AllGroupsController.swift */; };
+		9B59549225B472A200831F5E /* NetworkServ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59549125B472A200831F5E /* NetworkServ.swift */; };
+		9B59549725B473F900831F5E /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59549625B473F900831F5E /* VKLoginController.swift */; };
 		9B5A1EFF259A68DC00A7F776 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1EFE259A68DC00A7F776 /* Users.swift */; };
 		9B5A1F02259A691B00A7F776 /* PictSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1F01259A691B00A7F776 /* PictSettings.swift */; };
 		9B711F4F259A50EE003788EE /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711F4E259A50EE003788EE /* NewsCell.swift */; };
@@ -28,8 +30,9 @@
 		9B7527712593DA49006E58A5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7527702593DA49006E58A5 /* Groups.swift */; };
 		9B75277B2593FA92006E58A5 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B75277A2593FA92006E58A5 /* FriendsCell.swift */; };
 		9BAA281525AC793D001E270B /* FullscreenPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA281425AC793D001E270B /* FullscreenPhoto.swift */; };
-		9BAA281F25AF9BCC001E270B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA281E25AF9BCC001E270B /* Session.swift */; };
+		9BAA281F25AF9BCC001E270B /* MySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA281E25AF9BCC001E270B /* MySession.swift */; };
 		9BAA282325B09103001E270B /* SwopScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA282225B09102001E270B /* SwopScreenVC.swift */; };
+		CC7CA4DFBBE85581A62BF567 /* Pods_Vk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02CE77F9B6820008211AEF1 /* Pods_Vk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,8 @@
 		9B5201B52586B8C600AFB912 /* MyGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsController.swift; sourceTree = "<group>"; };
 		9B5201B82586B92000AFB912 /* MyGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsCell.swift; sourceTree = "<group>"; };
 		9B5201BC2586BA8B00AFB912 /* AllGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsController.swift; sourceTree = "<group>"; };
+		9B59549125B472A200831F5E /* NetworkServ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServ.swift; sourceTree = "<group>"; };
+		9B59549625B473F900831F5E /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		9B5A1EFE259A68DC00A7F776 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		9B5A1F01259A691B00A7F776 /* PictSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictSettings.swift; sourceTree = "<group>"; };
 		9B711F4E259A50EE003788EE /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -56,8 +61,11 @@
 		9B7527702593DA49006E58A5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		9B75277A2593FA92006E58A5 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		9BAA281425AC793D001E270B /* FullscreenPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPhoto.swift; sourceTree = "<group>"; };
-		9BAA281E25AF9BCC001E270B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		9BAA281E25AF9BCC001E270B /* MySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySession.swift; sourceTree = "<group>"; };
 		9BAA282225B09102001E270B /* SwopScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwopScreenVC.swift; sourceTree = "<group>"; };
+		A2641DEB6CD0F9E89B999D2E /* Pods-Vk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vk.debug.xcconfig"; path = "Target Support Files/Pods-Vk/Pods-Vk.debug.xcconfig"; sourceTree = "<group>"; };
+		BCF612E727A6ABAD032F32EE /* Pods-Vk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vk.release.xcconfig"; path = "Target Support Files/Pods-Vk/Pods-Vk.release.xcconfig"; sourceTree = "<group>"; };
+		F02CE77F9B6820008211AEF1 /* Pods_Vk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +73,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7CA4DFBBE85581A62BF567 /* Pods_Vk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78A189B171EC88C4B006180F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2641DEB6CD0F9E89B999D2E /* Pods-Vk.debug.xcconfig */,
+				BCF612E727A6ABAD032F32EE /* Pods-Vk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B3785FD25756402009EC390 = {
 			isa = PBXGroup;
 			children = (
 				9B37860825756402009EC390 /* Vk */,
 				9B37860725756402009EC390 /* Products */,
+				78A189B171EC88C4B006180F /* Pods */,
+				D34B1C2EB37EDB5B0C96815B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +110,7 @@
 		9B37860825756402009EC390 /* Vk */ = {
 			isa = PBXGroup;
 			children = (
+				9B59549025B4728800831F5E /* Services */,
 				9B52019A2586589100AFB912 /* Controller */,
 				9B5201992586588B00AFB912 /* View */,
 				9B5201972586586F00AFB912 /* Model */,
@@ -109,7 +130,7 @@
 				9B5A1EFE259A68DC00A7F776 /* Users.swift */,
 				9B5A1F01259A691B00A7F776 /* PictSettings.swift */,
 				9B05EDE4259E0C9A00637E3E /* AvaAnimation.swift */,
-				9BAA281E25AF9BCC001E270B /* Session.swift */,
+				9BAA281E25AF9BCC001E270B /* MySession.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +154,7 @@
 				9B52019C25867A1800AFB912 /* Friends */,
 				9B37860D25756402009EC390 /* LoginViewController.swift */,
 				9BAA282225B09102001E270B /* SwopScreenVC.swift */,
+				9B59549625B473F900831F5E /* VKLoginController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +195,14 @@
 			path = AllGroups;
 			sourceTree = "<group>";
 		};
+		9B59549025B4728800831F5E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9B59549125B472A200831F5E /* NetworkServ.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9B711F4D259A50BD003788EE /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +212,14 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		D34B1C2EB37EDB5B0C96815B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F02CE77F9B6820008211AEF1 /* Pods_Vk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B37861A25756406009EC390 /* Build configuration list for PBXNativeTarget "Vk" */;
 			buildPhases = (
+				A38AC75CDAC56184513D5FDC /* [CP] Check Pods Manifest.lock */,
 				9B37860225756402009EC390 /* Sources */,
 				9B37860325756402009EC390 /* Frameworks */,
 				9B37860425756402009EC390 /* Resources */,
+				AC14B1FB79CEABA5228F6479 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +287,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A38AC75CDAC56184513D5FDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC14B1FB79CEABA5228F6479 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vk/Pods-Vk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vk/Pods-Vk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vk/Pods-Vk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B37860225756402009EC390 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,12 +345,14 @@
 				9B7527712593DA49006E58A5 /* Groups.swift in Sources */,
 				9B5201B62586B8C600AFB912 /* MyGroupsController.swift in Sources */,
 				9B05EDE5259E0C9A00637E3E /* AvaAnimation.swift in Sources */,
-				9BAA281F25AF9BCC001E270B /* Session.swift in Sources */,
+				9B59549225B472A200831F5E /* NetworkServ.swift in Sources */,
+				9BAA281F25AF9BCC001E270B /* MySession.swift in Sources */,
 				9B5201BD2586BA8B00AFB912 /* AllGroupsController.swift in Sources */,
 				9B75277B2593FA92006E58A5 /* FriendsCell.swift in Sources */,
 				9B52019F25867A7B00AFB912 /* FriendsController.swift in Sources */,
 				9B711F4F259A50EE003788EE /* NewsCell.swift in Sources */,
 				9BAA281525AC793D001E270B /* FullscreenPhoto.swift in Sources */,
+				9B59549725B473F900831F5E /* VKLoginController.swift in Sources */,
 				9B5A1F02259A691B00A7F776 /* PictSettings.swift in Sources */,
 				9B5201AD2586A1EA00AFB912 /* PhotoViewController.swift in Sources */,
 				9BAA282325B09103001E270B /* SwopScreenVC.swift in Sources */,
@@ -415,6 +499,7 @@
 		};
 		9B37861B25756406009EC390 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2641DEB6CD0F9E89B999D2E /* Pods-Vk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -434,6 +519,7 @@
 		};
 		9B37861C25756406009EC390 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF612E727A6ABAD032F32EE /* Pods-Vk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

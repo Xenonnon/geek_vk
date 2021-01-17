@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7PE-ot-mQ1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,16 +9,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Login Controller-->
+        <scene sceneID="3Jz-Cg-u9F">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="7PE-ot-mQ1" customClass="VKLoginController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOC-o7-Im1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfo-xe-W6r">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a9X-Zg-dIi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a9X-Zg-dIi" firstAttribute="bottom" secondItem="pfo-xe-W6r" secondAttribute="bottom" id="2m7-Yo-QTX"/>
+                            <constraint firstItem="a9X-Zg-dIi" firstAttribute="trailing" secondItem="pfo-xe-W6r" secondAttribute="trailing" id="ASQ-qz-tRm"/>
+                            <constraint firstItem="pfo-xe-W6r" firstAttribute="top" secondItem="a9X-Zg-dIi" secondAttribute="top" id="jPm-Ax-D41"/>
+                            <constraint firstItem="pfo-xe-W6r" firstAttribute="leading" secondItem="a9X-Zg-dIi" secondAttribute="leading" id="uUi-da-RMm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="pfo-xe-W6r" id="HE0-O5-nuF"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="CustomLogin" id="FhR-JX-rIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyY-Fx-dbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.52173913043487" y="168.75"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtz-Da-zIR">
-                                <rect key="frame" x="0.0" y="32" width="414" height="832"/>
+                                <rect key="frame" x="0.0" y="-12" width="414" height="866"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoQ-C0-7jG" userLabel="loginText">
                                         <rect key="frame" x="151" y="318" width="202.5" height="34"/>
@@ -228,9 +263,16 @@
                             <outlet property="delegate" destination="dOu-d6-NRk" id="Ohj-xK-UcX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Мои друзья" id="UqP-A8-wNQ"/>
+                    <navigationItem key="navigationItem" title="Мои друзья" id="UqP-A8-wNQ">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="Vx5-zf-SFt">
+                            <connections>
+                                <action selector="LogOut:" destination="DOi-F2-8LP" id="PrR-gv-bZI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHv-J2-AO1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DOi-F2-8LP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5613.04347826087" y="-250.44642857142856"/>
         </scene>
