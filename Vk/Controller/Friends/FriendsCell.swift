@@ -11,7 +11,9 @@ class FriendsCell: UITableViewCell {
 
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendImage: UIImageView!
-
+    @IBAction func LogOut(_ sender: Any) {
+    }
+    
     @IBOutlet weak var friendImageView: ImageModTwo!
     @IBAction func avatarAnimate(_ sender: UIButton) {
         sender.avaAnimation(avatarAnimation: friendImageView)
