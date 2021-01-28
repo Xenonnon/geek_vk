@@ -378,7 +378,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRy-3Y-czH" customClass="ImageModTwo" customModule="Vk" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRy-3Y-czH" customClass="Avatar" customModule="Vk" customModuleProvider="target">
                                             <rect key="frame" x="20" y="13" width="55" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -400,7 +400,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groupImageView" destination="gRy-3Y-czH" id="hap-gc-iwL"/>
-                                    <outlet property="myGroupImage" destination="d9c-kU-E4L" id="Dyw-b6-G1J"/>
                                     <outlet property="myGroupName" destination="Gh8-1T-MDe" id="THe-cZ-RdE"/>
                                 </connections>
                             </tableViewCell>
@@ -578,7 +577,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-5e-RQX" customClass="ImageModTwo" customModule="Vk" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-5e-RQX" customClass="Avatar" customModule="Vk" customModuleProvider="target">
                                             <rect key="frame" x="20" y="13" width="55" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>

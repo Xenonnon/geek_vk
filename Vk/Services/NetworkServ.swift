@@ -7,10 +7,12 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class NetworkService {
 
     let vAPI = MySession.shared.vAPI
+    private static let baseUrl = "https://api.vk.com"
     
     func getUserFriends() {
         let urlComponent: URLComponents = {
@@ -66,19 +68,33 @@ class NetworkService {
         }
     }
     
-    func getUserGroups() {
-        let host = "https://api.vk.com"
+    func getUserGroups(completion: @escaping ([Group]) -> Void) {
+        //let host = "https://api.vk.com"
         let path = "/method/groups.get"
-        let parameters: Parameters = [
+        let params: Parameters = [
             "access_token": MySession.shared.token!,
             "v": vAPI,
             "extended": "1"
         ]
-            AF.request(host+path,
-                       method: .get,
-                       parameters: parameters).responseJSON { (json) in
-                            print(json)
-                       }
+        AF.request(NetworkService.baseUrl + path,
+                   method: .get,
+                   parameters: params)
+            .responseData { response in
+                switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let groupJSONs = json["response"]["items"].arrayValue
+                    let groups = groupJSONs.compactMap { Group($0) }
+                    completion(groups)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+//            AF.request(host+path,
+//                       method: .get,
+//                       parameters: parameters).responseJSON { (json) in
+//                            print(json)
+//                       }
     }
     
     func searchGroups(by caption: String) {

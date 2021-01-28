@@ -6,6 +6,8 @@ target 'Vk' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.4.1'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
 
   # Pods for Vk
 
