@@ -229,7 +229,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDS-fc-6xG" customClass="ImageModTwo" customModule="Vk" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDS-fc-6xG" customClass="Avatar" customModule="Vk" customModuleProvider="target">
                                             <rect key="frame" x="20" y="13" width="55" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -250,10 +250,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="friendImage" destination="Tpu-TM-EPX" id="qbv-jT-1ft"/>
-                                    <outlet property="friendImageView" destination="NDS-fc-6xG" id="ylB-iG-0r6"/>
+                                    <outlet property="friendImage" destination="NDS-fc-6xG" id="UUo-7w-J8v"/>
                                     <outlet property="friendName" destination="bGU-02-esK" id="uS8-bu-AXX"/>
-                                    <segue destination="ghW-ho-I2C" kind="show" identifier="FriendsSeq" id="A5Q-Gy-7BX"/>
+                                    <segue destination="dVy-O4-7If" kind="show" identifier="ShowUser" id="rZp-1d-1p4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -290,14 +289,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efV-a9-bWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6193" y="-915"/>
+            <point key="canvasLocation" x="7584" y="-250"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="hi4-pk-Ayu">
             <objects>
                 <collectionViewController modalPresentationStyle="fullScreen" id="dVy-O4-7If" customClass="PhotoViewController" customModule="Vk" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="75D-UO-oZb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zuy-OG-1az">
@@ -341,6 +340,7 @@
                                     <outlet property="likeButton" destination="EFP-el-kV9" id="tzS-yS-93Q"/>
                                     <outlet property="likeCounter" destination="dMn-dx-Ock" id="rNA-Kt-bkd"/>
                                     <outlet property="userImage" destination="sXb-u0-XfI" id="DRG-Mz-WGI"/>
+                                    <segue destination="ghW-ho-I2C" kind="show" identifier="ShowPhoto" id="tmB-kz-h7i"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

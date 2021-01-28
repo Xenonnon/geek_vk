@@ -61,11 +61,11 @@ extension VKLoginController: WKNavigationDelegate {
 
         
         
-        let networkService = NetworkService()
-        networkService.getUserFriends()
-        networkService.getPhotos(for: "22921485")
+       // let networkService = NetworkService()
+//        networkService.getUserFriends()
+  //      networkService.getPhotos(for: "22921485")
         //networkService.getUserGroups()
-        networkService.searchGroups(by: "GeekBrains")
+       // networkService.searchGroups(by: "GeekBrains")
         
         decisionHandler(.cancel)
         

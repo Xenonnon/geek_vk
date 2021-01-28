@@ -24,6 +24,7 @@
 		9B59549725B473F900831F5E /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59549625B473F900831F5E /* VKLoginController.swift */; };
 		9B5A1EFF259A68DC00A7F776 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1EFE259A68DC00A7F776 /* Users.swift */; };
 		9B5A1F02259A691B00A7F776 /* PictSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A1F01259A691B00A7F776 /* PictSettings.swift */; };
+		9B6B4E4E25C307D30076022C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6B4E4D25C307D30076022C /* Photo.swift */; };
 		9B711F4F259A50EE003788EE /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711F4E259A50EE003788EE /* NewsCell.swift */; };
 		9B711F53259A5113003788EE /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711F52259A5113003788EE /* NewsController.swift */; };
 		9B711F56259A51A0003788EE /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711F55259A51A0003788EE /* News.swift */; };
@@ -55,6 +56,7 @@
 		9B59549625B473F900831F5E /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		9B5A1EFE259A68DC00A7F776 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		9B5A1F01259A691B00A7F776 /* PictSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictSettings.swift; sourceTree = "<group>"; };
+		9B6B4E4D25C307D30076022C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		9B711F4E259A50EE003788EE /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		9B711F52259A5113003788EE /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		9B711F55259A51A0003788EE /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				9B5A1F01259A691B00A7F776 /* PictSettings.swift */,
 				9B05EDE4259E0C9A00637E3E /* AvaAnimation.swift */,
 				9BAA281E25AF9BCC001E270B /* MySession.swift */,
+				9B6B4E4D25C307D30076022C /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				9B5201BD2586BA8B00AFB912 /* AllGroupsController.swift in Sources */,
 				9B75277B2593FA92006E58A5 /* FriendsCell.swift in Sources */,
 				9B52019F25867A7B00AFB912 /* FriendsController.swift in Sources */,
+				9B6B4E4E25C307D30076022C /* Photo.swift in Sources */,
 				9B711F4F259A50EE003788EE /* NewsCell.swift in Sources */,
 				9BAA281525AC793D001E270B /* FullscreenPhoto.swift in Sources */,
 				9B59549725B473F900831F5E /* VKLoginController.swift in Sources */,
