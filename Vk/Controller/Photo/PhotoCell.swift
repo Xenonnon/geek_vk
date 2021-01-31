@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class PhotoCell: UICollectionViewCell {
     
     @IBAction func pulseButton(_ sender: UIButton) {
@@ -16,6 +17,13 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    
+    var user: User?
+    
+    func configure(with imageUrl: String) {
+        let url = URL(string: imageUrl)
+        self.userImage.kf.setImage(with: url)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

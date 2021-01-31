@@ -17,6 +17,8 @@ class FullscreenPhotoVC: UIViewController {
     var rightImageView: UIImageView!
     var swipeToRight: UIViewPropertyAnimator!
     var swipeToLeft: UIViewPropertyAnimator!
+    var index: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
