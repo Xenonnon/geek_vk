@@ -18,11 +18,10 @@ class NetworkService {
         let path = "/method/friends.get"
         
         let params: Parameters = [
-            "access_token": MySession.shared.token!,
+            "access_token": MySession.shared.token,
             "v": vAPI,
             "fields": "photo_100"
         ]
-        
         AF.request(NetworkService.baseUrl + path,
                    method: .get,
                    parameters: params)
@@ -33,47 +32,22 @@ class NetworkService {
                     let friendsJSONList = json["response"]["items"].arrayValue
                     let friends = friendsJSONList.compactMap { User($0) }
                     completion(friends)
+                    try? RealmServce.save(items: friends)
                 case .failure(let error):
                     print(error)
                 }
             }
-        
-//        let urlComponent: URLComponents = {
-//            var url = URLComponents()
-//            url.scheme = "https"
-//            url.host = "api.vk.com"
-//            url.path = "/method/friends.get"
-//            url.queryItems = [URLQueryItem(name: "access_token", value: MySession.shared.token),
-//                              URLQueryItem(name: "v", value: vAPI),
-//                              URLQueryItem(name: "fields", value: "photo_50")]
-//            return url
-//        }()
-//
-//        let session = URLSession(configuration: URLSessionConfiguration.default)
-//        if let url  = urlComponent.url {
-//            let task = session.dataTask(with: url) { (data, _, _) in
-//                if let data = data {
-//                    if let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) {
-//                        print(json)
-//                    }
-//                }
-//            }
-//            task.resume()
-//        }
-        
     }
     
-    //получение всех фото
     func getPhotos(for userId: Int, completion: @escaping ([Photo]) -> Void) {
         let path = "/method/photos.getAll"
         
         let params: Parameters = [
-            "access_token": MySession.shared.token!,
+            "access_token": MySession.shared.token,
             "v": vAPI,
             "extended": 1,
             "owner_id": "\(userId)"
         ]
-        
         AF.request(NetworkService.baseUrl + path,
                    method: .get,
                    parameters: params)
@@ -89,38 +63,11 @@ class NetworkService {
                 }
             }
     }
-//    func getPhotos(for userID: String) {
-//        let urlComponent: URLComponents = {
-//            var url = URLComponents()
-//            url.scheme = "https"
-//            url.host = "api.vk.com"
-//            url.path = "/method/photos.getAll"
-//            url.queryItems = [URLQueryItem(name: "access_token", value: MySession.shared.token),
-//                              URLQueryItem(name: "v", value: vAPI),
-//                              URLQueryItem(name: "owner_id", value: userID),
-//                              URLQueryItem(name: "extended", value: "1")]
-//            return url
-//        }()
-//
-//        let session = URLSession(configuration: URLSessionConfiguration.default)
-//        if let url  = urlComponent.url {
-//            let request = URLRequest(url: url)
-//            let task = session.dataTask(with: request) { (data, _, _) in
-//                if let data = data {
-//                    if let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) {
-//                        print(json)
-//                    }
-//                }
-//            }
-//            task.resume()
-//        }
-//    }
     
     func getUserGroups(completion: @escaping ([Group]) -> Void) {
-        //let host = "https://api.vk.com"
         let path = "/method/groups.get"
         let params: Parameters = [
-            "access_token": MySession.shared.token!,
+            "access_token": MySession.shared.token,
             "v": vAPI,
             "extended": "1"
         ]
@@ -134,44 +81,26 @@ class NetworkService {
                     let groupJSONs = json["response"]["items"].arrayValue
                     let groups = groupJSONs.compactMap { Group($0) }
                     completion(groups)
+                    try? RealmServce.save(items: groups)
                 case .failure(let error):
                     print(error)
                 }
             }
-//            AF.request(host+path,
-//                       method: .get,
-//                       parameters: parameters).responseJSON { (json) in
-//                            print(json)
-//                       }
     }
     
     func searchGroups(by caption: String) {
-        let host = "https://api.vk.com"
         let path = "/method/groups.search"
         let parameters: Parameters = [
-            "access_token": MySession.shared.token!,
+            "access_token": MySession.shared.token,
             "v": vAPI,
-            "q": caption
+            "q": caption,
+            "type": "group"
         ]
-            AF.request(host+path,
+        AF.request(NetworkService.baseUrl + path,
                        method: .get,
-                       parameters: parameters).responseJSON { (json) in
-                            print(json)
-                       }
-    }
-    
-    func logOut(by caption: String) {
-//        let host = "https://api.vk.com"
-//        let path = "/method/logout"
-//        let parameters: Parameters = [
-//            "access_token": MySession.shared.token!,
-//            "v": vAPI,
-//            "q": caption
-//        ]
-//            AF.request(host+path,
-//                       method: .get,
-//                       parameters: parameters).responseJSON { (json) in
-//                            print(json)
-//                       }
+                       parameters: parameters).responseJSON { response in
+                        guard let json = response.value else { return }
+                        print(json)
+                    }
     }
 }

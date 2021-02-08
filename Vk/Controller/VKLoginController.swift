@@ -55,21 +55,19 @@ extension VKLoginController: WKNavigationDelegate {
         }
         
 
-        MySession.shared.token = params["access_token"]
-        MySession.shared.client_id = params["client_id"]
-        
-
-        
-        
-       // let networkService = NetworkService()
-//        networkService.getUserFriends()
-  //      networkService.getPhotos(for: "22921485")
-        //networkService.getUserGroups()
-       // networkService.searchGroups(by: "GeekBrains")
-        
+        guard
+            let token = params["access_token"],
+            let userIdString = params["user_id"],
+            let _ = Int(userIdString)
+        else {
+            decisionHandler(.allow)
+            return
+        }
+        MySession.shared.token = token
+        performSegue(withIdentifier: "TabBarController", sender: nil)
         decisionHandler(.cancel)
         
-        performSegue(withIdentifier: "CustomLogin", sender: nil)
+        
     }
 
 }

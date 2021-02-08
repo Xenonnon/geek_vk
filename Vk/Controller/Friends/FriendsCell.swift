@@ -10,15 +10,22 @@ import UIKit
 class FriendsCell: UITableViewCell {
 
     @IBOutlet weak var friendName: UILabel!
-    //@IBOutlet weak var friendImage: UIImageView!
     @IBOutlet weak var friendImage: Avatar!
+    
     
     @IBAction func LogOut(_ sender: Any) {
     }
     
-//    @IBOutlet weak var friendImageView: ImageModTwo!
-//    @IBAction func avatarAnimate(_ sender: UIButton) {
-//        sender.avaAnimation(avatarAnimation: friendImageView)
-//        
-//    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.friendName.text = nil
+        self.friendImage.imageView.image = nil
+    }
+    
+    func configure(with user: User) {
+        self.friendName.text = "\(user.firstName) \(user.lastName)"
+        let url = URL(string: user.photo100)
+        self.friendImage.imageView.kf.setImage(with: url)
+    }
 }
