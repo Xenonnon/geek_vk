@@ -12,15 +12,17 @@ import RealmSwift
 class FriendsController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    private lazy var friends = try? Realm().objects(User.self) {
+
+    private var friends: Results<User>? {
         didSet {
-            self.filteredFriends = self.convertToArray(results: friends)
+            self.filteredFriends = friends
             self.tableView.reloadData()
         }
     }
     
-    var filteredFriends = [User]() {
+    private var notificationToken: NotificationToken?
+    
+    var filteredFriends: Results<User>? {
         didSet {
             self.friendsDict.removeAll()
             self.firstLetters.removeAll()
@@ -36,10 +38,10 @@ class FriendsController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 60
         tableView.register(FriendsSectionHeader.self, forHeaderFooterViewReuseIdentifier: "FriendsSectionHeader")
-        self.filteredFriends = self.convertToArray(results: friends)
+//        self.filteredFriends = self.convertToArray(results: friends)
+        self.friends = try? RealmServce.getBy(type: User.self)
         let networkService = NetworkService()
-        networkService.getUserFriends() { [] friends in
-        }
+        networkService.getUserFriends() { [] friends in }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,6 +51,32 @@ class FriendsController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             let nameFirstLetter = self.firstLetters[section]
             return self.friendsDict[nameFirstLetter]?.count ?? 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.notificationToken = self.friends?.observe { [weak self] change in
+            guard let self = self else { return }
+            switch change {
+            case .initial:
+                self.tableView.reloadData()
+            case let .update(_,
+                             deletions,
+                             insertions,
+                             modifications):
+                self.tableView.update(deletions: deletions,
+                                      insertions: insertions,
+                                      modifications: modifications)
+            case .error(let error):
+                self.show(error: error)
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.notificationToken?.invalidate()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,17 +119,19 @@ class FriendsController: UITableViewController {
         }
     
     private func fillFriendsDict() {
-        for user in self.filteredFriends {
-            let dictKey = user.firstName.first!
-            if var users = self.friendsDict[dictKey] {
-                users.append(user)
-                self.friendsDict[dictKey] = users
-            } else {
-                self.firstLetters.append(dictKey)
-                self.friendsDict[dictKey] = [user]
+        if let filteredFriends = self.filteredFriends {
+            for user in filteredFriends {
+                let dictKey = user.firstName.first!
+                if var users = self.friendsDict[dictKey] {
+                    users.append(user)
+                    self.friendsDict[dictKey] = users
+                } else {
+                    self.firstLetters.append(dictKey)
+                    self.friendsDict[dictKey] = [user]
+                }
             }
+            self.firstLetters.sort()
         }
-        self.firstLetters.sort()
     }
     
     private func logOut() {
@@ -118,17 +148,11 @@ extension FriendsController: UISearchBarDelegate {
     
     fileprivate func filterFriends(with text: String) {
         if text.isEmpty {
-            self.filteredFriends = self.convertToArray(results: friends)
+            self.filteredFriends = self.friends
             return
         }
         
-        self.filteredFriends = self.convertToArray(results: friends).filter {$0.firstName.lowercased().contains(text.lowercased())}
-    }
-}
-
-extension FriendsController {
-    private func convertToArray <T>(results: Results<T>?) -> [T] {
-        guard let results = results else { return [] }
-        return Array(results)
+        self.filteredFriends = self.friends?
+            .filter("firstName CONTAINS[cd] %@ OR lastName CONTAINS[cd] %@", text, text)
     }
 }

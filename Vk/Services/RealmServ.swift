@@ -20,5 +20,9 @@ class RealmServce {
             realm.add(items, update: update)
         }
     }
+    
+    static func getBy <T: Object>(type: T.Type) throws -> Results<T> {
+        try Realm().objects(T.self)
+    }
 
 }

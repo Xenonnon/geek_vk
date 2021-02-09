@@ -31,16 +31,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//       guard checkUser() else {
-//           showAlert()
-//           return false
-//       }
-//       return true
-//    }
-    
     internal func checkUser() -> Bool {
         guard
             let username = loginText.text,
@@ -84,15 +74,6 @@ class LoginViewController: UIViewController {
         thirdDot.backgroundColor = .clear
         animateAppearing()
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.navigationBar.isHidden = false
-//    }
-    
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//    }
     
     @objc func keyboardWasShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
@@ -170,7 +151,6 @@ class LoginViewController: UIViewController {
         animation.toValue = 1.0
         animation.stiffness = 350
         animation.duration = 1.0
-        //imageView.layer.add(animation, forKey: nil)
     }
 }
 

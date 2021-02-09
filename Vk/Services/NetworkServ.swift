@@ -14,6 +14,8 @@ class NetworkService {
     let vAPI = MySession.shared.vAPI
     private static let baseUrl = "https://api.vk.com"
     
+    
+    
     func getUserFriends(completion: @escaping ([User]) -> Void) {
         let path = "/method/friends.get"
         
