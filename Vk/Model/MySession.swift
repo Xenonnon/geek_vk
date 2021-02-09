@@ -12,13 +12,7 @@ class MySession {
     
     public static let shared = MySession()
     
-    
     var token = ""
     var client_id = -1
     let vAPI = "5.126"
-        
-//    var token: String?
-//    var client_id: String?
-//    let vAPI = "5.126"
-    
 }

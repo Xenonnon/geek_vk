@@ -15,6 +15,9 @@
 		9B37861325756406009EC390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B37861225756406009EC390 /* Assets.xcassets */; };
 		9B37861625756406009EC390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B37861425756406009EC390 /* LaunchScreen.storyboard */; };
 		9B463C4725CC59EF0051E202 /* RealmServ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B463C4625CC59EF0051E202 /* RealmServ.swift */; };
+		9B4A566C25D2D10D00AD6817 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A566B25D2D10D00AD6817 /* UITableView+Ext.swift */; };
+		9B4A567025D2D12D00AD6817 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A566F25D2D12D00AD6817 /* UIViewController+Ext.swift */; };
+		9B4A567325D2D14900AD6817 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A567225D2D14900AD6817 /* UIImageView+Ext.swift */; };
 		9B4DB0C125C9F4BE00D6DC6F /* FriendsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4DB0C025C9F4BE00D6DC6F /* FriendsSectionHeader.swift */; };
 		9B52019F25867A7B00AFB912 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52019E25867A7B00AFB912 /* FriendsController.swift */; };
 		9B5201AD2586A1EA00AFB912 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5201AC2586A1EA00AFB912 /* PhotoViewController.swift */; };
@@ -49,6 +52,9 @@
 		9B37861525756406009EC390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B37861725756406009EC390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B463C4625CC59EF0051E202 /* RealmServ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServ.swift; sourceTree = "<group>"; };
+		9B4A566B25D2D10D00AD6817 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		9B4A566F25D2D12D00AD6817 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		9B4A567225D2D14900AD6817 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		9B4DB0C025C9F4BE00D6DC6F /* FriendsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSectionHeader.swift; sourceTree = "<group>"; };
 		9B52019E25867A7B00AFB912 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		9B5201AC2586A1EA00AFB912 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 		9B37860825756402009EC390 /* Vk */ = {
 			isa = PBXGroup;
 			children = (
+				9B4A566A25D2D0E600AD6817 /* Extensions */,
 				9B59549025B4728800831F5E /* Services */,
 				9B52019A2586589100AFB912 /* Controller */,
 				9B5201992586588B00AFB912 /* View */,
@@ -126,6 +133,16 @@
 				9B37861725756406009EC390 /* Info.plist */,
 			);
 			path = Vk;
+			sourceTree = "<group>";
+		};
+		9B4A566A25D2D0E600AD6817 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B4A566B25D2D10D00AD6817 /* UITableView+Ext.swift */,
+				9B4A566F25D2D12D00AD6817 /* UIViewController+Ext.swift */,
+				9B4A567225D2D14900AD6817 /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9B5201972586586F00AFB912 /* Model */ = {
@@ -340,6 +357,7 @@
 				9B37860E25756402009EC390 /* LoginViewController.swift in Sources */,
 				9B37860A25756402009EC390 /* AppDelegate.swift in Sources */,
 				9B711F56259A51A0003788EE /* News.swift in Sources */,
+				9B4A566C25D2D10D00AD6817 /* UITableView+Ext.swift in Sources */,
 				9B37860C25756402009EC390 /* SceneDelegate.swift in Sources */,
 				9B5201B92586B92000AFB912 /* MyGroupsCell.swift in Sources */,
 				9B5A1EFF259A68DC00A7F776 /* Users.swift in Sources */,
@@ -354,12 +372,14 @@
 				9B52019F25867A7B00AFB912 /* FriendsController.swift in Sources */,
 				9B6B4E4E25C307D30076022C /* Photo.swift in Sources */,
 				9B711F4F259A50EE003788EE /* NewsCell.swift in Sources */,
+				9B4A567325D2D14900AD6817 /* UIImageView+Ext.swift in Sources */,
 				9BAA281525AC793D001E270B /* FullscreenPhoto.swift in Sources */,
 				9B59549725B473F900831F5E /* VKLoginController.swift in Sources */,
 				9B5A1F02259A691B00A7F776 /* PictSettings.swift in Sources */,
 				9B5201AD2586A1EA00AFB912 /* PhotoViewController.swift in Sources */,
 				9BAA282325B09103001E270B /* SwopScreenVC.swift in Sources */,
 				9B463C4725CC59EF0051E202 /* RealmServ.swift in Sources */,
+				9B4A567025D2D12D00AD6817 /* UIViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

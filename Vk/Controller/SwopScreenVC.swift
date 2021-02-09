@@ -175,7 +175,7 @@
 
 
 import UIKit
-////////////////////////////
+
 class CustomNavigationController: UINavigationController, UINavigationControllerDelegate {
     
     let interactiveTransition = InteractiveTransition()
